@@ -1,1 +1,1 @@
-# c_programming
+This repository contains a collection of C programming programs that I practice daily to strengthen my understanding of programming fundamentals and problem-solving skills.The goal of this repository is to build a strong foundation in C programming, which is essential for understanding data structures, algorithms, and system-level programming.
