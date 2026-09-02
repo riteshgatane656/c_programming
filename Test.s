@@ -1,8 +1,8 @@
-	.file	"1.c"
+	.file	"Test.c"
 	.def	___main;	.scl	2;	.type	32;	.endef
 	.section .rdata,"dr"
-LC0:
-	.ascii "marvellous inforsystems\0"
+LC2:
+	.ascii "Area of circle is :%f\12\0"
 	.text
 	.globl	_main
 	.def	_main;	.scl	2;	.type	32;	.endef
@@ -15,9 +15,15 @@ LFB10:
 	movl	%esp, %ebp
 	.cfi_def_cfa_register 5
 	andl	$-16, %esp
-	subl	$16, %esp
+	subl	$32, %esp
 	call	___main
-	movl	$LC0, (%esp)
+	fldz
+	fstps	28(%esp)
+	flds	LC1
+	fstps	28(%esp)
+	flds	28(%esp)
+	fstpl	4(%esp)
+	movl	$LC2, (%esp)
 	call	_printf
 	movl	$0, %eax
 	leave
@@ -26,5 +32,9 @@ LFB10:
 	ret
 	.cfi_endproc
 LFE10:
+	.section .rdata,"dr"
+	.align 4
+LC1:
+	.long	1107550536
 	.ident	"GCC: (MinGW.org GCC-6.3.0-1) 6.3.0"
 	.def	_printf;	.scl	2;	.type	32;	.endef

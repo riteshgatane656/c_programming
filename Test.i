@@ -1,7 +1,12 @@
-# 1 "1.c"
+# 1 "Test.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "1.c"
+# 1 "Test.c"
+
+
+
+
+
 # 1 "c:\\mingw\\include\\stdio.h" 1 3
 # 38 "c:\\mingw\\include\\stdio.h" 3
        
@@ -437,12 +442,20 @@ int vswscanf (const wchar_t *__restrict__, const wchar_t * __restrict__, __built
 
 
 
-# 2 "1.c" 2
+# 7 "Test.c" 2
 
-# 2 "1.c"
+
+
+# 9 "Test.c"
 int main()
 {
-    printf("marvellous inforsystems");
 
-    return 0;
+    float Area = 0.0f ;
+
+    Area = 10.5f*(3.14) ;
+
+    printf("Area of circle is :%f\n",Area);
+
+
+    return 0 ;
 }
